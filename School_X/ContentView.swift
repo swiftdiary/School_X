@@ -8,14 +8,23 @@
 import SwiftUI
 
 struct ContentView: View {
+    @Environment(AppNavigation.self) private var navigation
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
+        @Bindable var navigation = navigation
+        
+        TabView(selection: $navigation.tabSelection, content: {
+            ForEach(TabBarOption.allCases, id: \.rawValue) { option in
+                NavigationStack(path: $navigation.navigationPath) {
+                    option.view
+                        .navigationDestination(for: NavigationOption.self) { option in
+                            option.destination
+                        }
+                }
+                .tag(option)
+                .tabItem { option.label }
+            }
+        })
     }
 }
 

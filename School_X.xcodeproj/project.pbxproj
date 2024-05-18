@@ -13,6 +13,13 @@
 		CA95EAD52BF8A8B600303AAE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA95EAD42BF8A8B600303AAE /* Preview Assets.xcassets */; };
 		CA95EADD2BF8A9E600303AAE /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA95EADC2BF8A9E600303AAE /* OnboardingView.swift */; };
 		CA95EADF2BF8B12E00303AAE /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA95EADE2BF8B12E00303AAE /* OnboardingViewModel.swift */; };
+		CA95EAE22BF8C00A00303AAE /* Navigation+Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA95EAE12BF8C00A00303AAE /* Navigation+Tab.swift */; };
+		CA95EAE92BF8C33300303AAE /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA95EAE82BF8C33300303AAE /* TodayView.swift */; };
+		CA95EAEB2BF8C33E00303AAE /* SubjectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA95EAEA2BF8C33E00303AAE /* SubjectsView.swift */; };
+		CA95EAED2BF8C34800303AAE /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA95EAEC2BF8C34800303AAE /* SearchView.swift */; };
+		CA95EAEF2BF8C35100303AAE /* StatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA95EAEE2BF8C35100303AAE /* StatsView.swift */; };
+		CA95EAF12BF8C35A00303AAE /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA95EAF02BF8C35A00303AAE /* ProfileView.swift */; };
+		CA95EAF42BF8C7D900303AAE /* Tips.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA95EAF32BF8C7D900303AAE /* Tips.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +30,13 @@
 		CA95EAD42BF8A8B600303AAE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CA95EADC2BF8A9E600303AAE /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		CA95EADE2BF8B12E00303AAE /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
+		CA95EAE12BF8C00A00303AAE /* Navigation+Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Navigation+Tab.swift"; sourceTree = "<group>"; };
+		CA95EAE82BF8C33300303AAE /* TodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayView.swift; sourceTree = "<group>"; };
+		CA95EAEA2BF8C33E00303AAE /* SubjectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectsView.swift; sourceTree = "<group>"; };
+		CA95EAEC2BF8C34800303AAE /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		CA95EAEE2BF8C35100303AAE /* StatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsView.swift; sourceTree = "<group>"; };
+		CA95EAF02BF8C35A00303AAE /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		CA95EAF32BF8C7D900303AAE /* Tips.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tips.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +71,13 @@
 			children = (
 				CA95EACD2BF8A8B500303AAE /* School_XApp.swift */,
 				CA95EACF2BF8A8B500303AAE /* ContentView.swift */,
+				CA95EAF22BF8C7C100303AAE /* Tips */,
+				CA95EAE72BF8C32500303AAE /* Profile */,
+				CA95EAE62BF8C32000303AAE /* Stats */,
+				CA95EAE52BF8C31900303AAE /* Search */,
+				CA95EAE42BF8C31200303AAE /* Subjects */,
+				CA95EAE32BF8C30700303AAE /* Today */,
+				CA95EAE02BF8BFFA00303AAE /* Navigation+Tab */,
 				CA95EADB2BF8A9CB00303AAE /* Onboarding */,
 				CA95EAD12BF8A8B600303AAE /* Assets.xcassets */,
 				CA95EAD32BF8A8B600303AAE /* Preview Content */,
@@ -79,6 +100,62 @@
 				CA95EADE2BF8B12E00303AAE /* OnboardingViewModel.swift */,
 			);
 			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		CA95EAE02BF8BFFA00303AAE /* Navigation+Tab */ = {
+			isa = PBXGroup;
+			children = (
+				CA95EAE12BF8C00A00303AAE /* Navigation+Tab.swift */,
+			);
+			path = "Navigation+Tab";
+			sourceTree = "<group>";
+		};
+		CA95EAE32BF8C30700303AAE /* Today */ = {
+			isa = PBXGroup;
+			children = (
+				CA95EAE82BF8C33300303AAE /* TodayView.swift */,
+			);
+			path = Today;
+			sourceTree = "<group>";
+		};
+		CA95EAE42BF8C31200303AAE /* Subjects */ = {
+			isa = PBXGroup;
+			children = (
+				CA95EAEA2BF8C33E00303AAE /* SubjectsView.swift */,
+			);
+			path = Subjects;
+			sourceTree = "<group>";
+		};
+		CA95EAE52BF8C31900303AAE /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				CA95EAEC2BF8C34800303AAE /* SearchView.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		CA95EAE62BF8C32000303AAE /* Stats */ = {
+			isa = PBXGroup;
+			children = (
+				CA95EAEE2BF8C35100303AAE /* StatsView.swift */,
+			);
+			path = Stats;
+			sourceTree = "<group>";
+		};
+		CA95EAE72BF8C32500303AAE /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				CA95EAF02BF8C35A00303AAE /* ProfileView.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		CA95EAF22BF8C7C100303AAE /* Tips */ = {
+			isa = PBXGroup;
+			children = (
+				CA95EAF32BF8C7D900303AAE /* Tips.swift */,
+			);
+			path = Tips;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,9 +229,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA95EADD2BF8A9E600303AAE /* OnboardingView.swift in Sources */,
+				CA95EAF42BF8C7D900303AAE /* Tips.swift in Sources */,
 				CA95EAD02BF8A8B500303AAE /* ContentView.swift in Sources */,
+				CA95EAF12BF8C35A00303AAE /* ProfileView.swift in Sources */,
+				CA95EAEB2BF8C33E00303AAE /* SubjectsView.swift in Sources */,
 				CA95EACE2BF8A8B500303AAE /* School_XApp.swift in Sources */,
+				CA95EAED2BF8C34800303AAE /* SearchView.swift in Sources */,
+				CA95EAE22BF8C00A00303AAE /* Navigation+Tab.swift in Sources */,
+				CA95EAE92BF8C33300303AAE /* TodayView.swift in Sources */,
 				CA95EADF2BF8B12E00303AAE /* OnboardingViewModel.swift in Sources */,
+				CA95EAEF2BF8C35100303AAE /* StatsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

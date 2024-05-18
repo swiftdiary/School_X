@@ -10,6 +10,7 @@ import SwiftUI
 @main
 struct School_XApp: App {
     @AppStorage("onboarding") private var onboarding: Bool = false
+    @State private var navigation = AppNavigation()
     
     var body: some Scene {
         WindowGroup {
@@ -18,6 +19,7 @@ struct School_XApp: App {
                     OnboardingView()
                 } else {
                     ContentView()
+                        .environment(navigation)
                 }
             }
             .task {
