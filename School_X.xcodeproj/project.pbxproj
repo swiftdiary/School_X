@@ -20,6 +20,8 @@
 		CA95EAEF2BF8C35100303AAE /* StatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA95EAEE2BF8C35100303AAE /* StatsView.swift */; };
 		CA95EAF12BF8C35A00303AAE /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA95EAF02BF8C35A00303AAE /* ProfileView.swift */; };
 		CA95EAF42BF8C7D900303AAE /* Tips.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA95EAF32BF8C7D900303AAE /* Tips.swift */; };
+		D5A29CF42BF8DDB600D4F15D /* SplineRuntime in Frameworks */ = {isa = PBXBuildFile; productRef = D5A29CF32BF8DDB600D4F15D /* SplineRuntime */; };
+		D5A29CF62BF8DDD000D4F15D /* SplinePasteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A29CF52BF8DDD000D4F15D /* SplinePasteView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,7 @@
 		CA95EAEE2BF8C35100303AAE /* StatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsView.swift; sourceTree = "<group>"; };
 		CA95EAF02BF8C35A00303AAE /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		CA95EAF32BF8C7D900303AAE /* Tips.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tips.swift; sourceTree = "<group>"; };
+		D5A29CF52BF8DDD000D4F15D /* SplinePasteView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplinePasteView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5A29CF42BF8DDB600D4F15D /* SplineRuntime in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +83,7 @@
 				CA95EAE32BF8C30700303AAE /* Today */,
 				CA95EAE02BF8BFFA00303AAE /* Navigation+Tab */,
 				CA95EADB2BF8A9CB00303AAE /* Onboarding */,
+				D5A29CF12BF8DDA400D4F15D /* SplineComponents */,
 				CA95EAD12BF8A8B600303AAE /* Assets.xcassets */,
 				CA95EAD32BF8A8B600303AAE /* Preview Content */,
 			);
@@ -158,6 +163,14 @@
 			path = Tips;
 			sourceTree = "<group>";
 		};
+		D5A29CF12BF8DDA400D4F15D /* SplineComponents */ = {
+			isa = PBXGroup;
+			children = (
+				D5A29CF52BF8DDD000D4F15D /* SplinePasteView.swift */,
+			);
+			path = SplineComponents;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -174,6 +187,9 @@
 			dependencies = (
 			);
 			name = School_X;
+			packageProductDependencies = (
+				D5A29CF32BF8DDB600D4F15D /* SplineRuntime */,
+			);
 			productName = School_X;
 			productReference = CA95EACA2BF8A8B500303AAE /* School_X.app */;
 			productType = "com.apple.product-type.application";
@@ -202,6 +218,9 @@
 				Base,
 			);
 			mainGroup = CA95EAC12BF8A8B500303AAE;
+			packageReferences = (
+				D5A29CF22BF8DDB600D4F15D /* XCRemoteSwiftPackageReference "spline-ios" */,
+			);
 			productRefGroup = CA95EACB2BF8A8B500303AAE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -239,6 +258,7 @@
 				CA95EAE92BF8C33300303AAE /* TodayView.swift in Sources */,
 				CA95EADF2BF8B12E00303AAE /* OnboardingViewModel.swift in Sources */,
 				CA95EAEF2BF8C35100303AAE /* StatsView.swift in Sources */,
+				D5A29CF62BF8DDD000D4F15D /* SplinePasteView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,6 +466,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D5A29CF22BF8DDB600D4F15D /* XCRemoteSwiftPackageReference "spline-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/splinetool/spline-ios.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D5A29CF32BF8DDB600D4F15D /* SplineRuntime */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D5A29CF22BF8DDB600D4F15D /* XCRemoteSwiftPackageReference "spline-ios" */;
+			productName = SplineRuntime;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CA95EAC22BF8A8B500303AAE /* Project object */;
 }
