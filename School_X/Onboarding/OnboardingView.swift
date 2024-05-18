@@ -9,7 +9,7 @@ import SwiftUI
 
 struct OnboardingView: View {
     @AppStorage("onboarding") private var onboarding: Bool = false
-    @StateObject private var onboardingVM = OnboardingViewModel()
+    @State private var onboardingVM = OnboardingViewModel()
     
     var body: some View {
         let onboardItem = onboardingVM.onboardItems[onboardingVM.onboardIndex]
