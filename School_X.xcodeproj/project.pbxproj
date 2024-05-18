@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CA5DBFEE2BF9551300F65547 /* DownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5DBFED2BF9551300F65547 /* DownloadManager.swift */; };
 		CA95EACE2BF8A8B500303AAE /* School_XApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA95EACD2BF8A8B500303AAE /* School_XApp.swift */; };
 		CA95EAD02BF8A8B500303AAE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA95EACF2BF8A8B500303AAE /* ContentView.swift */; };
 		CA95EAD22BF8A8B600303AAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA95EAD12BF8A8B600303AAE /* Assets.xcassets */; };
@@ -29,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CA5DBFED2BF9551300F65547 /* DownloadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadManager.swift; sourceTree = "<group>"; };
 		CA95EACA2BF8A8B500303AAE /* School_X.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = School_X.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA95EACD2BF8A8B500303AAE /* School_XApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = School_XApp.swift; sourceTree = "<group>"; };
 		CA95EACF2BF8A8B500303AAE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -63,6 +65,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CA5DBFEC2BF9550300F65547 /* DownloadManager */ = {
+			isa = PBXGroup;
+			children = (
+				CA5DBFED2BF9551300F65547 /* DownloadManager.swift */,
+			);
+			path = DownloadManager;
+			sourceTree = "<group>";
+		};
 		CA95EAC12BF8A8B500303AAE = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +95,7 @@
 				CA95EB032BF92BBA00303AAE /* School-X-Info.plist */,
 				CA95EACD2BF8A8B500303AAE /* School_XApp.swift */,
 				CA95EACF2BF8A8B500303AAE /* ContentView.swift */,
+				CA5DBFEC2BF9550300F65547 /* DownloadManager */,
 				CA95EAFA2BF9263B00303AAE /* Network */,
 				CA95EAF52BF9019600303AAE /* Authentication */,
 				CA95EAF22BF8C7C100303AAE /* Tips */,
@@ -285,6 +296,7 @@
 				CA95EAEB2BF8C33E00303AAE /* SubjectsView.swift in Sources */,
 				CA95EACE2BF8A8B500303AAE /* School_XApp.swift in Sources */,
 				CA95EAED2BF8C34800303AAE /* SearchView.swift in Sources */,
+				CA5DBFEE2BF9551300F65547 /* DownloadManager.swift in Sources */,
 				CA95EAE22BF8C00A00303AAE /* Navigation+Tab.swift in Sources */,
 				CA95EAE92BF8C33300303AAE /* TodayView.swift in Sources */,
 				CA95EAFE2BF9271F00303AAE /* API+Manager.swift in Sources */,
