@@ -10,6 +10,7 @@ import SwiftUI
 @main
 struct School_XApp: App {
     @AppStorage("onboarding") private var onboarding: Bool = false
+    @AppStorage("is_authenticated") private var isAuthenticated: Bool = false
     @State private var navigation = AppNavigation()
     
     var body: some Scene {
@@ -18,8 +19,12 @@ struct School_XApp: App {
                 if !onboarding {
                     OnboardingView()
                 } else {
-                    ContentView()
-                        .environment(navigation)
+                    if isAuthenticated {
+                        ContentView()
+                            .environment(navigation)
+                    } else {
+                        AuthView()
+                    }
                 }
             }
             .task {
