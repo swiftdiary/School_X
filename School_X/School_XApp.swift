@@ -9,9 +9,20 @@ import SwiftUI
 
 @main
 struct School_XApp: App {
+    @AppStorage("onboarding") private var onboarding: Bool = false
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            Group {
+                if !onboarding {
+                    OnboardingView()
+                } else {
+                    ContentView()
+                }
+            }
+            .task {
+                
+            }
         }
     }
 }

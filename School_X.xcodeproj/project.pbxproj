@@ -11,6 +11,7 @@
 		CA95EAD02BF8A8B500303AAE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA95EACF2BF8A8B500303AAE /* ContentView.swift */; };
 		CA95EAD22BF8A8B600303AAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA95EAD12BF8A8B600303AAE /* Assets.xcassets */; };
 		CA95EAD52BF8A8B600303AAE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA95EAD42BF8A8B600303AAE /* Preview Assets.xcassets */; };
+		CA95EADD2BF8A9E600303AAE /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA95EADC2BF8A9E600303AAE /* OnboardingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		CA95EACF2BF8A8B500303AAE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CA95EAD12BF8A8B600303AAE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CA95EAD42BF8A8B600303AAE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CA95EADC2BF8A9E600303AAE /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				CA95EACD2BF8A8B500303AAE /* School_XApp.swift */,
 				CA95EACF2BF8A8B500303AAE /* ContentView.swift */,
+				CA95EADB2BF8A9CB00303AAE /* Onboarding */,
 				CA95EAD12BF8A8B600303AAE /* Assets.xcassets */,
 				CA95EAD32BF8A8B600303AAE /* Preview Content */,
 			);
@@ -65,6 +68,14 @@
 				CA95EAD42BF8A8B600303AAE /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CA95EADB2BF8A9CB00303AAE /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				CA95EADC2BF8A9E600303AAE /* OnboardingView.swift */,
+			);
+			path = Onboarding;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +148,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA95EADD2BF8A9E600303AAE /* OnboardingView.swift in Sources */,
 				CA95EAD02BF8A8B500303AAE /* ContentView.swift in Sources */,
 				CA95EACE2BF8A8B500303AAE /* School_XApp.swift in Sources */,
 			);
@@ -280,6 +292,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -309,6 +322,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
