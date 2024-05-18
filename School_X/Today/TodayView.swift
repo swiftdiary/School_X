@@ -11,15 +11,38 @@ struct TodayView: View {
     @Environment(AppNavigation.self) private var navigation
     
     var body: some View {
+        @Bindable var navigation = navigation
         VStack {
-            Text("Hello, Today!")
-            Button("Go") {
-                navigation.go(to: .tips)
+            ScrollView {
+                RoundedRectangle(cornerRadius: 12.0)
+                    .fill(Color.orange.gradient)
+                
+                    .stroke(.white.opacity(0.5),lineWidth: 3)
+                    .frame(height: 200)
+                    .overlay(content: {
+                        HStack {
+                            Text("Tips")
+                            Image(systemName: "lightbulb.min.fill")
+                        }
+                        .font(.largeTitle.bold())
+                        .foregroundStyle(.background)
+                    })
+                    .padding()
+                VStack(alignment: .leading) {
+                    Text("Top")
+                        .font(.title.bold())
+                    Rectangle()
+                        .frame(height: 2)
+                }
+                .padding()
             }
         }
     }
 }
 
 #Preview {
-    TodayView()
+    @State var navigation = AppNavigation()
+    
+    return TodayView()
+        .environment(navigation)
 }
