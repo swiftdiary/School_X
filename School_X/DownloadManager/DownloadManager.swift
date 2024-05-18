@@ -37,7 +37,7 @@ actor DownloadManager {
         
         // Check if file already exists in disk cache
         if fileManager.fileExists(atPath: cacheFileURL.path) {
-            try await fileManager.copyItemAsync(at: cacheFileURL, to: destinationURL)
+            try await self.copyItemAsync(at: cacheFileURL, to: destinationURL)
             return destinationURL
         }
         
