@@ -9,6 +9,7 @@ import SwiftUI
 
 struct AuthView: View {
     @AppStorage("is_authenticated") private var isAuthenticated: Bool = false
+    @AppStorage("authentication_token") private var authenticationToken: String = ""
     @State private var authVM = AuthViewModel()
     
     var body: some View {
@@ -25,7 +26,13 @@ struct AuthView: View {
                     }
                     .padding()
                 Button("Sign Up!") {
-                    print("Sign Up!")
+                    Task {
+                        do {
+                            try await authVM.signIn()
+                        } catch {
+                            print(error)
+                        }
+                    }
                 }
                 .buttonStyle(BorderedProminentButtonStyle())
                 .font(.headline)
@@ -36,6 +43,16 @@ struct AuthView: View {
             Rectangle()
                 .fill(Color.accentColor.opacity(0.5).gradient)
                 .ignoresSafeArea()
+        }
+        .onChange(of: authVM.signInToken) { oldValue, newValue in
+            if oldValue.isEmpty, !newValue.isEmpty {
+                authenticationToken = newValue
+            }
+        }
+        .onChange(of: authVM.hasSignedIn) { oldValue, newValue in
+            if oldValue == false, newValue == true {
+                isAuthenticated = true
+            }
         }
     }
 }

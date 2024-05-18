@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TodayView: View {
     @Environment(AppNavigation.self) private var navigation
-    
+    @AppStorage("authentication_token") private var authenticationToken: String = ""
     var body: some View {
         @Bindable var navigation = navigation
         VStack {
@@ -59,6 +59,23 @@ struct TodayView: View {
             }
         }
         .navigationTitle("Today")
+        .onAppear(perform: {
+            print("TOKEN: \(authenticationToken)")
+        })
+        .task {
+            do {
+                let manager = APIManager()
+                guard let url = URL(string: APIRequestUrl.contents.urlString) else {
+                    print("No url")
+                    return
+                }
+                let data: [String: String] = try await manager.get(url: url)
+                
+                print(data)
+            } catch {
+                print("error, \(error)")
+            }
+        }
     }
 }
 
