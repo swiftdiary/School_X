@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CA5DBFEE2BF9551300F65547 /* DownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5DBFED2BF9551300F65547 /* DownloadManager.swift */; };
+		CA5DBFF52BF96CB600F65547 /* ARKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5DBFF42BF96CB600F65547 /* ARKit.swift */; };
 		CA95EACE2BF8A8B500303AAE /* School_XApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA95EACD2BF8A8B500303AAE /* School_XApp.swift */; };
 		CA95EAD02BF8A8B500303AAE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA95EACF2BF8A8B500303AAE /* ContentView.swift */; };
 		CA95EAD22BF8A8B600303AAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA95EAD12BF8A8B600303AAE /* Assets.xcassets */; };
@@ -31,6 +32,7 @@
 
 /* Begin PBXFileReference section */
 		CA5DBFED2BF9551300F65547 /* DownloadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadManager.swift; sourceTree = "<group>"; };
+		CA5DBFF42BF96CB600F65547 /* ARKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARKit.swift; sourceTree = "<group>"; };
 		CA95EACA2BF8A8B500303AAE /* School_X.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = School_X.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA95EACD2BF8A8B500303AAE /* School_XApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = School_XApp.swift; sourceTree = "<group>"; };
 		CA95EACF2BF8A8B500303AAE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -73,6 +75,14 @@
 			path = DownloadManager;
 			sourceTree = "<group>";
 		};
+		CA5DBFF32BF96CAA00F65547 /* AR+RealityKit */ = {
+			isa = PBXGroup;
+			children = (
+				CA5DBFF42BF96CB600F65547 /* ARKit.swift */,
+			);
+			path = "AR+RealityKit";
+			sourceTree = "<group>";
+		};
 		CA95EAC12BF8A8B500303AAE = {
 			isa = PBXGroup;
 			children = (
@@ -107,6 +117,7 @@
 				CA95EAE02BF8BFFA00303AAE /* Navigation+Tab */,
 				CA95EADB2BF8A9CB00303AAE /* Onboarding */,
 				D5A29CF12BF8DDA400D4F15D /* SplineComponents */,
+				CA5DBFF32BF96CAA00F65547 /* AR+RealityKit */,
 				CA95EAD12BF8A8B600303AAE /* Assets.xcassets */,
 				CA95EAD32BF8A8B600303AAE /* Preview Content */,
 			);
@@ -299,6 +310,7 @@
 				CA5DBFEE2BF9551300F65547 /* DownloadManager.swift in Sources */,
 				CA95EAE22BF8C00A00303AAE /* Navigation+Tab.swift in Sources */,
 				CA95EAE92BF8C33300303AAE /* TodayView.swift in Sources */,
+				CA5DBFF52BF96CB600F65547 /* ARKit.swift in Sources */,
 				CA95EAFE2BF9271F00303AAE /* API+Manager.swift in Sources */,
 				CA95EAF92BF90A8E00303AAE /* AuthViewModel.swift in Sources */,
 				CA95EB052BF9336B00303AAE /* Auth+Response+Type.swift in Sources */,
