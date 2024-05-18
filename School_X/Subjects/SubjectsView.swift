@@ -8,15 +8,28 @@
 import SwiftUI
 
 struct SubjectsView: View {
+    @State private var subjectsVM = SubjectsViewModel()
+    
     var body: some View {
         VStack {
-            List(0..<100) { x in
+            List(subjectsVM.subjects) { subject in
                 HStack {
-                    RoundedRectangle(cornerRadius: 15.0)
-                        .fill(Color.accentColor.gradient)
-                        .frame(width: 80, height: 80)
+                    AsyncImage(url: URL(string: subject.photoWebp)) { img in
+                        img
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 80, height: 80)
+                    } placeholder: {
+                        RoundedRectangle(cornerRadius: 15.0)
+                            .fill(Color.accentColor.gradient)
+                            .frame(width: 80, height: 80)
+                            .overlay {
+                                ProgressView()
+                            }
+                    }
+
                     VStack(alignment: .leading) {
-                        Text("Subject Name")
+                        Text(subject.title)
                             .font(.title2.bold())
                         Text("Subtitle text (Optional)")
                             .font(.caption)
@@ -27,6 +40,15 @@ struct SubjectsView: View {
             .listStyle(.plain)
         }
         .navigationTitle("Subjects")
+        .onAppear(perform: {
+            Task.detached {
+                do {
+                    try await subjectsVM.getSubjects()
+                } catch {
+                    print("Error", error)
+                }
+            }
+        })
     }
 }
 

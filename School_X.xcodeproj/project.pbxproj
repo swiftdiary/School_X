@@ -26,6 +26,9 @@
 		CA95EAF92BF90A8E00303AAE /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA95EAF82BF90A8E00303AAE /* AuthViewModel.swift */; };
 		CA95EAFE2BF9271F00303AAE /* API+Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA95EAFD2BF9271F00303AAE /* API+Manager.swift */; };
 		CA95EB052BF9336B00303AAE /* Auth+Response+Type.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA95EB042BF9336B00303AAE /* Auth+Response+Type.swift */; };
+		CA9872072BF96DBE007DBFF5 /* SubjectsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9872062BF96DBE007DBFF5 /* SubjectsViewModel.swift */; };
+		CA9872092BF96E12007DBFF5 /* Subject.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9872082BF96E12007DBFF5 /* Subject.swift */; };
+		CA98720B2BF970AE007DBFF5 /* GetResponseTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA98720A2BF970AE007DBFF5 /* GetResponseTemplate.swift */; };
 		D5A29CF42BF8DDB600D4F15D /* SplineRuntime in Frameworks */ = {isa = PBXBuildFile; productRef = D5A29CF32BF8DDB600D4F15D /* SplineRuntime */; };
 		D5A29CF62BF8DDD000D4F15D /* SplinePasteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A29CF52BF8DDD000D4F15D /* SplinePasteView.swift */; };
 /* End PBXBuildFile section */
@@ -52,6 +55,9 @@
 		CA95EAFD2BF9271F00303AAE /* API+Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API+Manager.swift"; sourceTree = "<group>"; };
 		CA95EB032BF92BBA00303AAE /* School-X-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "School-X-Info.plist"; sourceTree = SOURCE_ROOT; };
 		CA95EB042BF9336B00303AAE /* Auth+Response+Type.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Auth+Response+Type.swift"; sourceTree = "<group>"; };
+		CA9872062BF96DBE007DBFF5 /* SubjectsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectsViewModel.swift; sourceTree = "<group>"; };
+		CA9872082BF96E12007DBFF5 /* Subject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subject.swift; sourceTree = "<group>"; };
+		CA98720A2BF970AE007DBFF5 /* GetResponseTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetResponseTemplate.swift; sourceTree = "<group>"; };
 		D5A29CF52BF8DDD000D4F15D /* SplinePasteView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplinePasteView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -161,6 +167,8 @@
 			isa = PBXGroup;
 			children = (
 				CA95EAEA2BF8C33E00303AAE /* SubjectsView.swift */,
+				CA9872062BF96DBE007DBFF5 /* SubjectsViewModel.swift */,
+				CA9872082BF96E12007DBFF5 /* Subject.swift */,
 			);
 			path = Subjects;
 			sourceTree = "<group>";
@@ -211,6 +219,7 @@
 			isa = PBXGroup;
 			children = (
 				CA95EAFD2BF9271F00303AAE /* API+Manager.swift */,
+				CA98720A2BF970AE007DBFF5 /* GetResponseTemplate.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -300,6 +309,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA95EADD2BF8A9E600303AAE /* OnboardingView.swift in Sources */,
+				CA98720B2BF970AE007DBFF5 /* GetResponseTemplate.swift in Sources */,
 				CA95EAF42BF8C7D900303AAE /* Tips.swift in Sources */,
 				CA95EAD02BF8A8B500303AAE /* ContentView.swift in Sources */,
 				CA95EAF72BF901A800303AAE /* AuthView.swift in Sources */,
@@ -311,9 +321,11 @@
 				CA95EAE22BF8C00A00303AAE /* Navigation+Tab.swift in Sources */,
 				CA95EAE92BF8C33300303AAE /* TodayView.swift in Sources */,
 				CA5DBFF52BF96CB600F65547 /* ARKit.swift in Sources */,
+				CA9872072BF96DBE007DBFF5 /* SubjectsViewModel.swift in Sources */,
 				CA95EAFE2BF9271F00303AAE /* API+Manager.swift in Sources */,
 				CA95EAF92BF90A8E00303AAE /* AuthViewModel.swift in Sources */,
 				CA95EB052BF9336B00303AAE /* Auth+Response+Type.swift in Sources */,
+				CA9872092BF96E12007DBFF5 /* Subject.swift in Sources */,
 				CA95EADF2BF8B12E00303AAE /* OnboardingViewModel.swift in Sources */,
 				CA95EAEF2BF8C35100303AAE /* StatsView.swift in Sources */,
 				D5A29CF62BF8DDD000D4F15D /* SplinePasteView.swift in Sources */,
