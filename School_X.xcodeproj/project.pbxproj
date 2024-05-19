@@ -31,6 +31,11 @@
 		CA98720B2BF970AE007DBFF5 /* GetResponseTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA98720A2BF970AE007DBFF5 /* GetResponseTemplate.swift */; };
 		CA98720D2BF9B3BE007DBFF5 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA98720C2BF9B3BE007DBFF5 /* ProfileViewModel.swift */; };
 		CA98720F2BF9B3FF007DBFF5 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA98720E2BF9B3FF007DBFF5 /* Profile.swift */; };
+		CA9872112BF9BB00007DBFF5 /* ARScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9872102BF9BB00007DBFF5 /* ARScreen.swift */; };
+		CA9872132BF9BB18007DBFF5 /* CustomARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9872122BF9BB18007DBFF5 /* CustomARView.swift */; };
+		CA9872152BF9BC2E007DBFF5 /* ExampleARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9872142BF9BC2E007DBFF5 /* ExampleARView.swift */; };
+		CA9872172BF9BF3B007DBFF5 /* ExampleARViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9872162BF9BF3B007DBFF5 /* ExampleARViewModel.swift */; };
+		CA98721B2BF9C026007DBFF5 /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA98721A2BF9C026007DBFF5 /* Content.swift */; };
 		D5A29CF42BF8DDB600D4F15D /* SplineRuntime in Frameworks */ = {isa = PBXBuildFile; productRef = D5A29CF32BF8DDB600D4F15D /* SplineRuntime */; };
 		D5A29CF62BF8DDD000D4F15D /* SplinePasteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A29CF52BF8DDD000D4F15D /* SplinePasteView.swift */; };
 /* End PBXBuildFile section */
@@ -62,6 +67,11 @@
 		CA98720A2BF970AE007DBFF5 /* GetResponseTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetResponseTemplate.swift; sourceTree = "<group>"; };
 		CA98720C2BF9B3BE007DBFF5 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		CA98720E2BF9B3FF007DBFF5 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		CA9872102BF9BB00007DBFF5 /* ARScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARScreen.swift; sourceTree = "<group>"; };
+		CA9872122BF9BB18007DBFF5 /* CustomARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomARView.swift; sourceTree = "<group>"; };
+		CA9872142BF9BC2E007DBFF5 /* ExampleARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleARView.swift; sourceTree = "<group>"; };
+		CA9872162BF9BF3B007DBFF5 /* ExampleARViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleARViewModel.swift; sourceTree = "<group>"; };
+		CA98721A2BF9C026007DBFF5 /* Content.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
 		D5A29CF52BF8DDD000D4F15D /* SplinePasteView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplinePasteView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -89,6 +99,10 @@
 			isa = PBXGroup;
 			children = (
 				CA5DBFF42BF96CB600F65547 /* ARKit.swift */,
+				CA9872102BF9BB00007DBFF5 /* ARScreen.swift */,
+				CA9872122BF9BB18007DBFF5 /* CustomARView.swift */,
+				CA9872142BF9BC2E007DBFF5 /* ExampleARView.swift */,
+				CA9872162BF9BF3B007DBFF5 /* ExampleARViewModel.swift */,
 			);
 			path = "AR+RealityKit";
 			sourceTree = "<group>";
@@ -115,6 +129,8 @@
 				CA95EB032BF92BBA00303AAE /* School-X-Info.plist */,
 				CA95EACD2BF8A8B500303AAE /* School_XApp.swift */,
 				CA95EACF2BF8A8B500303AAE /* ContentView.swift */,
+				CA9872192BF9C01B007DBFF5 /* Content */,
+				CA9872182BF9C015007DBFF5 /* Topic */,
 				CA5DBFEC2BF9550300F65547 /* DownloadManager */,
 				CA95EAFA2BF9263B00303AAE /* Network */,
 				CA95EAF52BF9019600303AAE /* Authentication */,
@@ -230,6 +246,21 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
+		CA9872182BF9C015007DBFF5 /* Topic */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Topic;
+			sourceTree = "<group>";
+		};
+		CA9872192BF9C01B007DBFF5 /* Content */ = {
+			isa = PBXGroup;
+			children = (
+				CA98721A2BF9C026007DBFF5 /* Content.swift */,
+			);
+			path = Content;
+			sourceTree = "<group>";
+		};
 		D5A29CF12BF8DDA400D4F15D /* SplineComponents */ = {
 			isa = PBXGroup;
 			children = (
@@ -318,11 +349,14 @@
 				CA98720B2BF970AE007DBFF5 /* GetResponseTemplate.swift in Sources */,
 				CA95EAF42BF8C7D900303AAE /* Tips.swift in Sources */,
 				CA98720F2BF9B3FF007DBFF5 /* Profile.swift in Sources */,
+				CA9872112BF9BB00007DBFF5 /* ARScreen.swift in Sources */,
 				CA95EAD02BF8A8B500303AAE /* ContentView.swift in Sources */,
 				CA95EAF72BF901A800303AAE /* AuthView.swift in Sources */,
 				CA95EAF12BF8C35A00303AAE /* ProfileView.swift in Sources */,
 				CA95EAEB2BF8C33E00303AAE /* SubjectsView.swift in Sources */,
 				CA95EACE2BF8A8B500303AAE /* School_XApp.swift in Sources */,
+				CA9872152BF9BC2E007DBFF5 /* ExampleARView.swift in Sources */,
+				CA9872132BF9BB18007DBFF5 /* CustomARView.swift in Sources */,
 				CA95EAED2BF8C34800303AAE /* SearchView.swift in Sources */,
 				CA5DBFEE2BF9551300F65547 /* DownloadManager.swift in Sources */,
 				CA95EAE22BF8C00A00303AAE /* Navigation+Tab.swift in Sources */,
@@ -334,9 +368,11 @@
 				CA95EB052BF9336B00303AAE /* Auth+Response+Type.swift in Sources */,
 				CA9872092BF96E12007DBFF5 /* Subject.swift in Sources */,
 				CA98720D2BF9B3BE007DBFF5 /* ProfileViewModel.swift in Sources */,
+				CA98721B2BF9C026007DBFF5 /* Content.swift in Sources */,
 				CA95EADF2BF8B12E00303AAE /* OnboardingViewModel.swift in Sources */,
 				CA95EAEF2BF8C35100303AAE /* StatsView.swift in Sources */,
 				D5A29CF62BF8DDD000D4F15D /* SplinePasteView.swift in Sources */,
+				CA9872172BF9BF3B007DBFF5 /* ExampleARViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -474,6 +510,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "School-X-Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "For AR immersive experience";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -505,6 +542,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "School-X-Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "For AR immersive experience";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

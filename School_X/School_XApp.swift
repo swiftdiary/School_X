@@ -20,8 +20,9 @@ struct School_XApp: App {
                     OnboardingView()
                 } else {
                     if isAuthenticated {
-                        ContentView()
-                            .environment(navigation)
+//                        ContentView()
+//                            .environment(navigation)
+                        ExampleARView()
                     } else {
                         AuthView()
                     }
