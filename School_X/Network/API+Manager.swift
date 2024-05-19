@@ -14,9 +14,11 @@ class APIManager: APIManagerProtocol {
     func get<T: Decodable>(url: URL) async throws -> T {
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         if let token = UserDefaults.standard.value(forKey: "authentication_token") as? String {
-            request.setValue("Bearer \(token)", forHTTPHeaderField: "Authentication")
+            request.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
         }
+        print(request.allHTTPHeaderFields)
         let (data, response) = try await URLSession.shared.data(for: request)
         try validate(response: response)
         return try decode(data: data)
@@ -27,7 +29,7 @@ class APIManager: APIManagerProtocol {
         request.httpMethod = "GET"
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         if let token = UserDefaults.standard.value(forKey: "authentication_token") as? String {
-            request.setValue("Bearer \(token)", forHTTPHeaderField: "Authentication")
+            request.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
         }
         request.httpBody = try JSONEncoder().encode(body)
         let (data, response) = try await URLSession.shared.data(for: request)
@@ -40,7 +42,7 @@ class APIManager: APIManagerProtocol {
         request.httpMethod = "POST"
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         if let token = UserDefaults.standard.value(forKey: "authentication_token") as? String {
-            request.setValue("Bearer \(token)", forHTTPHeaderField: "Authentication")
+            request.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
         }
         request.httpBody = try JSONEncoder().encode(body)
         let (data, response) = try await URLSession.shared.data(for: request)
@@ -78,7 +80,10 @@ enum APIRequestUrl {
     case subjectsId(String)
     case topics
     case topicsId(String)
-    
+    case profile
+    case submitQuestionAnswer
+    case topicsIdUserTestProgress(String)
+    case topicsIdUserTestProgressStatus(String, String)
     case auth
     
     var urlString: String {
@@ -90,6 +95,10 @@ enum APIRequestUrl {
         case .subjectsId(let id): APIManager.SchoolXURL + "/main/subjects/\(id)/"
         case .topics: APIManager.SchoolXURL + "/main/topics/"
         case .topicsId(let id): APIManager.SchoolXURL + "/main/topics/\(id)/"
+        case .submitQuestionAnswer: APIManager.SchoolXURL + "/main/submit-question-answer/"
+        case .topicsIdUserTestProgress(let id): APIManager.SchoolXURL + "/main/topics/\(id)/user-test-progress/"
+        case .topicsIdUserTestProgressStatus(let id, let status): APIManager.SchoolXURL + "/main/topics/\(id)/user-test-progress/\(status)/"
+        case .profile: APIManager.SchoolXURL + "/users/user-profile/"
             
         case .auth: APIManager.SchoolXURL + "/users/auth/"
         }
