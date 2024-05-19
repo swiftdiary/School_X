@@ -24,11 +24,17 @@ final class AppNavigation {
 
 enum NavigationOption: Hashable {
     case tips
+    case topics(Subject) // subject
+    case content(Topic) // topic
+    case contentStarted([Content])
     
     @ViewBuilder
     var destination: some View {
         switch self {
         case .tips: Tips()
+        case .topics(let subject): TopicView(subject: subject)
+        case .content(let topic): TopicContentView(topic: topic)
+        case .contentStarted(let contents): TopicContentStartedView(contents: contents)
         }
     }
 }

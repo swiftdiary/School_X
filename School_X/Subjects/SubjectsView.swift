@@ -13,28 +13,31 @@ struct SubjectsView: View {
     var body: some View {
         VStack {
             List(subjectsVM.subjects) { subject in
-                HStack {
-                    AsyncImage(url: URL(string: subject.photoWebp)) { img in
-                        img
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 80, height: 80)
-                    } placeholder: {
-                        RoundedRectangle(cornerRadius: 15.0)
-                            .fill(Color.accentColor.gradient)
-                            .frame(width: 80, height: 80)
-                            .overlay {
-                                ProgressView()
-                            }
-                    }
+                NavigationLink(value: NavigationOption.topics(subject)) {
+                    HStack {
+                        AsyncImage(url: URL(string: subject.photoWebp)) { img in
+                            img
+                                .resizable()
+                                .scaledToFit()
+                                .frame(maxWidth: 100)
+                                .clipShape(RoundedRectangle(cornerRadius: 12.0))
+                        } placeholder: {
+                            RoundedRectangle(cornerRadius: 15.0)
+                                .fill(Color.accentColor.gradient)
+                                .frame(width: 80, height: 80)
+                                .overlay {
+                                    ProgressView()
+                                }
+                        }
 
-                    VStack(alignment: .leading) {
-                        Text(subject.title)
-                            .font(.title2.bold())
-                        Text("Subtitle text (Optional)")
-                            .font(.caption)
+                        VStack(alignment: .leading) {
+                            Text(subject.title)
+                                .font(.title2.bold())
+                            Text("Subtitle text (Optional)")
+                                .font(.caption)
+                        }
+                        .frame(maxWidth: .infinity, alignment: .topLeading)
                     }
-                    .frame(maxWidth: .infinity, alignment: .topLeading)
                 }
             }
             .listStyle(.plain)

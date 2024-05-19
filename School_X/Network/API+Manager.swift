@@ -11,6 +11,21 @@ class APIManager: APIManagerProtocol {
 
     static let SchoolXURL = "https://school-x.json-translator.uz/api/v1"
     
+    func get<T: Decodable>(url: URL, queryParams: [String: String]) async throws -> T {
+        var url = url
+        url.append(queryItems: queryParams.map({ URLQueryItem(name: $0.key, value: $0.value) }))
+        var request = URLRequest(url: url)
+        request.httpMethod = "GET"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        if let token = UserDefaults.standard.value(forKey: "authentication_token") as? String {
+            request.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+        }
+        
+        let (data, response) = try await URLSession.shared.data(for: request)
+        try validate(response: response)
+        return try decode(data: data)
+    }
+    
     func get<T: Decodable>(url: URL) async throws -> T {
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
@@ -18,7 +33,6 @@ class APIManager: APIManagerProtocol {
         if let token = UserDefaults.standard.value(forKey: "authentication_token") as? String {
             request.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
         }
-        print(request.allHTTPHeaderFields)
         let (data, response) = try await URLSession.shared.data(for: request)
         try validate(response: response)
         return try decode(data: data)
